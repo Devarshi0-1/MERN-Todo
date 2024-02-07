@@ -6,7 +6,7 @@ export const sendCookie = (
     user: IUser,
     res: Response,
     message: string,
-    statusCode: number = 200
+    statusCode: number = 200,
 ) => {
     const maxAge = 15 * 24 * 60 * 60 * 1000
 
@@ -18,7 +18,7 @@ export const sendCookie = (
             sameSite: process.env.VITE_ENV_NODE_ENV === 'DEVELOPMENT' ? 'lax' : 'none',
             secure: process.env.VITE_ENV_NODE_ENV === 'DEVELOPMENT' ? false : true,
             // @ts-ignore
-            origin: process.env.VITE_ENV_FRONTEND_URL!,
+            origin: '/',
         })
         .json({
             success: true,
