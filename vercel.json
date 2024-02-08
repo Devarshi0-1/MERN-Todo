@@ -2,56 +2,22 @@
     "version": 2,
     "rewrites": [
         {
-            "source": "/api/v1/users/new",
-            "destination": "/api/v1/users/new"
-        },
-        {
-            "source": "/api/v1/users/login",
-            "destination": "/api/v1/users/login"
-        },
-        {
-            "source": "/api/v1/users/logout",
-            "destination": "/api/v1/users/logout"
-        },
-        {
-            "source": "/api/v1/users/me",
-            "destination": "/api/v1/users/me"
-        },
-        {
-            "source": "/api/v1/task/new",
-            "destination": "/api/v1/task/new"
-        },
-        {
-            "source": "/api/v1/task/my",
-            "destination": "/api/v1/task/my"
-        },
-        {
-            "source": "/api/v1/task/:userId/:id",
-            "destination": "/api/v1/task/:userId/:id"
-        },
-        {
-            "source": "/api/v1/admin/delete/:id",
-            "destination": "/api/v1/admin/delete/:id"
-        },
-        {
-            "source": "/api/v1/admin/user/:id",
-            "destination": "/api/v1/admin/user/:id"
-        },
-        {
-            "source": "/api/v1/admin/users/all",
-            "destination": "/api/v1/admin/users/all"
-        },
-        {
-            "source": "/api/v1/admin/tasks/all/:id",
-            "destination": "/api/v1/admin/tasks/all/:id"
-        },
-        {
-            "source": "/api/v1/admin/task/:id",
-            "destination": "/api/v1/admin/task/:id"
-        },
-        {
             "source": "/(.*)",
             "destination": "/index.html"
+        }
+    ],
+    "routes": [
+        {
+            "src": "/api/v1/users/(.*)",
+            "dest": "/api/v1/users/$1"
+        },
+        {
+            "src": "/api/v1/task/(.*)",
+            "dest": "/api/v1/task/$1"
+        },
+        {
+            "src": "/api/v1/admin/(.*)",
+            "dest": "/api/v1/admin/$1"
         }
     ]
 }
